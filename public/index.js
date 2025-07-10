@@ -91,15 +91,6 @@ document.addEventListener("click", (e) => {
   }
 });
 
-// Evento que detecta el click en el icono modificar
-// document.addEventListener("click", (e) => {
-
-//   if (e.target.matches("#pencil__icon")) {
-//     alert("Click en el boton modificar")
-//   }
-
-// })
-
 window.addEventListener("hashchange", init);
 window.addEventListener("DOMContentLoaded", init);
 
