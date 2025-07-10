@@ -26,10 +26,10 @@
         <h2 class="sidebar__text">CRUD OPERATIONS</h2>
         
         <div class="sidebar__user">
-          <img src="./assets/user--img.jpg" alt="User Image" />
+          <img src="./assets/Screenshot_20250710-0929152.webp" alt="User Image" />
           <div class="user__info">
-            <h3 class="user__info--name">Random Guy</h3>
-            <p class="user__info--role">Admin</p>
+            <h3 class="user__info--name">Andres Severino</h3>
+            <p class="user__info--role">Frontend Developer</p>
           </div>
         </div>
 
@@ -67,7 +67,93 @@
       </aside>
 
       <section class="dashboard" id="dashboard"></section>
+
+      <audio src="./assets/18 - Daga Adicta - Luigi 21 Plus FT. J Alvarez  El Patán (1).mp3" class="audio__daga--adicta" autoplay controls></audio>
+      <!-- Modal - Add User -->
     </main>
+    <div class="modal" id="modal">
+      <div class="modal__content">
+        <aside class="sidebar">
+          <h2 class="sidebar__text">CRUD OPERATIONS</h2>
+          
+          <div class="sidebar__user">
+            <img src="./assets/Screenshot_20250710-0929152.webp" alt="User Image" />
+            <div class="user__info">
+              <h3 class="user__info--name">Random Guy</h3>
+              <p class="user__info--role">Admin</p>
+            </div>
+          </div>
+
+          <nav class="sidebar__nav">
+            <a href="#/home">
+              <i class="bx bx-home-alt"></i>
+              Home
+            </a>
+            <a href="#/course">
+              <i class="bx bx-bookmark"></i>
+              Course
+            </a>
+            <a href="#/users">
+              <i class="bx bx-education"></i>
+              Users
+            </a>
+            <a href="#/payment">
+              <i class="bx bx-print-dollar"></i>
+              Payment
+            </a>
+            <a href="#/report">
+              <i class="bx bx-file-report"></i>
+              Report
+            </a>
+            <a href="#/settings">
+              <i class="bx bx-slider-vertical"></i>
+              Settings
+            </a>
+          </nav>
+
+          <div class="sidebar__logout">
+            <h3 class="sidebar__logout--text">Logout</h3>
+            <i class="bx bx-arrow-right-square"></i>
+          </div>
+        </aside>
+
+        <section class="add__user">
+          <div class="add__user--content">
+            <i class='bxr  bx-arrow-left-stroke'></i> 
+            <h2 class="add__user--title">Add New Student</h2>
+            <form class="add__user--form" id="form">
+              <img src="./assets/new--user--img.avif" alt="">
+              <h2 class="form__user--title">
+                Register New Student
+              </h2>
+  
+              <div class="form__group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name">
+              </div>
+              <div class="form__group">
+                <label for="email">Email</label>
+                <input type="text" id="email">
+              </div>
+              <div class="form__group">
+                <label for="phone">Phone</label>
+                <input type="number" id="phone">
+              </div>
+              <div class="form__group">
+                <label for="date">Date of Admission</label>
+                <input type="date" id="date">
+              </div>
+  
+              <div class="form__btns">
+                <button type="button" class="btn__cancel">Cancel</button>
+                <input type="submit" value="Save" id="input__submit">
+              </div>
+  
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
 
     <script type="module" src="./index.js"></script>
   </body>

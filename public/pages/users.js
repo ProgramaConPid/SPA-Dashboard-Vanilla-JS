@@ -31,31 +31,41 @@ export default async function Users() {
     }
 
     const data = await response.json();
+    const dataLength = data.length > 0
 
-    data.forEach(user => {
+    if (dataLength) {
+      data.forEach(user => {
+        const divUser = document.createElement("div"); 
+        divUser.classList.add("divUser")
+        divUser.id = `${user.id}`
+        divUser.innerHTML = `
+          <div class="user__name">
+            <img class="img__user" src="../assets/Screenshot_20250710-0929152.webp">
+            <p class="user__name--text">${user.name}</p>
+          </div>
+  
+          <div class="user__info--info">
+            <p>${user.email}</p>
+            <p>${user.phone}</p>
+            <p>${user.enrollNumber}</p>
+            <p>${user.dateOfAdmission}</p>
+          </div>
+  
+          <div class="user__btns">
+            <i class='bx bx-pencil' id="pencil__icon"></i> 
+            <i class='bx bx-trash-alt' id="trash__icon"></i> 
+          </div>
+        `;
+        divContainerUsers.appendChild(divUser);
+      });
+    } else {
       const divUser = document.createElement("div"); 
-      divUser.classList.add("divUser")
-      divUser.id = `${user.id}`
+      divUser.classList.add("divUserMessage")
       divUser.innerHTML = `
-        <div class="user__name">
-          <img src="../assets/user--img.jpg">
-          <p class="user__name--text">${user.name}</p>
-        </div>
-
-        <div class="user__info--info">
-          <p>${user.email}</p>
-          <p>${user.phone}</p>
-          <p>${user.enrollNumber}</p>
-          <p>${user.dateOfAdmission}</p>
-        </div>
-
-        <div class="user__btns">
-          <i class='bx bx-pencil' id="pencil__icon"></i> 
-          <i class='bx bx-trash-alt' id="trash__icon"></i> 
-        </div>
-      `;
-      divContainerUsers.appendChild(divUser);
-    });
+        <h1>Aún no hay usuarios registrados.</h1>
+      `
+      divContainerUsers.appendChild(divUser)
+    }
 
   } catch (err) {
     alert(err);

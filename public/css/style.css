@@ -10,6 +10,8 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background-color: #000000;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='30' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23222' stroke-width='10' %3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 main.main__content {
@@ -19,6 +21,7 @@ main.main__content {
   overflow: hidden;
   display: grid;
   grid-template-columns: auto 1fr;
+  border-radius: .3rem;
 }
 
 aside.sidebar {
@@ -62,6 +65,7 @@ aside.sidebar {
   height: 130px;
   border-radius: 50%;
   object-fit: cover;
+  mix-blend-mode: color-burn;
 }
 
 .sidebar__nav {
@@ -161,7 +165,6 @@ aside.sidebar {
 }
 
 /* Div Add User */
-
 .divAddUser {
   display: flex;
   justify-content: space-between;
@@ -174,6 +177,10 @@ aside.sidebar {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+.container__addUser i {
+  color: #6A00FE;
 }
 
 .btn__addUser {
@@ -189,19 +196,30 @@ aside.sidebar {
 /* Div Users */
 .divContainerUsers {
   height: 600px;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
   overflow-y: auto;
   padding: 10px 25px;
 }
 
 .divUser {
+  /* height: 80px; */
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 15px;
   background-color: #fff;
   border-radius: .4rem;
+}
+
+.divUserMessage {
+  font-size: 22px;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .user__name {
@@ -219,6 +237,7 @@ aside.sidebar {
   height: 50px;
   border-radius: .4rem;
   object-fit: cover;
+  mix-blend-mode: hard-light;
 } 
 
 .user__info--info {
@@ -237,5 +256,118 @@ aside.sidebar {
 
 .user__btns i {
   color: #6A00FE;
+  cursor: pointer;
+}
+
+/* Modal Styles */
+.modal {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, .9);
+  transform: translateY(-100%);
+  transition: 500ms ease;
+}
+
+.modal.active {
+  transform: translateY(0);
+}
+
+.modal__content {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-auto-rows: auto;
+}
+
+.modal__content .sidebar {
+  padding: 50px 10px;
+}
+
+.modal__content .sidebar__text {
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+section.add__user {
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='119' height='119' viewBox='0 0 100 100'%3E%3Cg stroke='%23CCC' stroke-width='0' %3E%3Crect fill='%23F1ECE7' x='-60' y='-60' width='125' height='240'/%3E%3C/g%3E%3C/svg%3E");
+  background-position: center;
+}
+
+.add__user--content {
+  display: grid;
+  gap: 2rem;
+  padding: 30px;
+}
+
+.add__user--content i {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.add__user--form {
+  padding: 20px 30px;
+  background-color: #fff;
+  border-radius: .4rem;
+  display: grid;
+  gap: 2rem;
+  place-items: center;
+}
+
+.add__user--form .form__group {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  width: 100%;
+}
+
+.form__group input {
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, .1);
+  border-radius: .3rem;
+  transition: 500ms ease;
+}
+
+.form__group input:focus {
+  border: 1px solid #6A00FE;
+  outline: none;
+}
+
+.add__user--form img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.form__btns {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+}
+
+.form__btns > * {
+  flex: 1;
+  padding: 15px 25px;
+  border: none;
+  border-radius: .3rem;
+  cursor: pointer;
+}
+
+.form__btns #input__submit {
+  color: #fff;
+  background-color: #6A00FE;
+}
+
+.audio__daga--adicta {
+  position: absolute;
+  top: -100%;
+  opacity: 0;
+}
+
+.bx-bell {
   cursor: pointer;
 }

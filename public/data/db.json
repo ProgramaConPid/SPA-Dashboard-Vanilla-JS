@@ -2,83 +2,11 @@
   "users": [
     {
       "id": 1,
-      "name": "Nombre Completo",
-      "email": "correo@ejemplo.com",
-      "phone": "1234567890",
-      "enrollNumber": "12345678901234",
-      "dateOfAdmission": "08-Dec-2021"
-    },
-    {
-      "id": 2,
-      "name": "Ana Martínez",
-      "email": "ana.martinez@example.com",
-      "phone": "3012345678",
-      "enrollNumber": "98765432100011",
-      "dateOfAdmission": "15-Jan-2022"
-    },
-    {
-      "id": 3,
-      "name": "Carlos Ruiz",
-      "email": "carlos.ruiz@example.com",
-      "phone": "3112345678",
-      "enrollNumber": "99887766554433",
-      "dateOfAdmission": "21-Feb-2022"
-    },
-    {
-      "id": 4,
-      "name": "Laura Torres",
-      "email": "laura.torres@example.com",
-      "phone": "3212345678",
-      "enrollNumber": "11223344556677",
-      "dateOfAdmission": "30-Mar-2022"
-    },
-    {
-      "id": 5,
-      "name": "Javier López",
-      "email": "javier.lopez@example.com",
-      "phone": "3312345678",
-      "enrollNumber": "77665544332211",
-      "dateOfAdmission": "10-Apr-2022"
-    },
-    {
-      "id": 6,
-      "name": "Sofía Gómez",
-      "email": "sofia.gomez@example.com",
-      "phone": "3412345678",
-      "enrollNumber": "66778899001122",
-      "dateOfAdmission": "18-May-2022"
-    },
-    {
-      "id": 7,
-      "name": "Diego Herrera",
-      "email": "diego.herrera@example.com",
-      "phone": "3512345678",
-      "enrollNumber": "55667788990011",
-      "dateOfAdmission": "25-Jun-2022"
-    },
-    {
-      "id": 8,
-      "name": "Diego Herrera",
-      "email": "diego.herrera@example.com",
-      "phone": "3512345678",
-      "enrollNumber": "55667788990011",
-      "dateOfAdmission": "25-Jun-2022"
-    },
-    {
-      "id": 9,
-      "name": "Diego Herrera",
-      "email": "diego.herrera@example.com",
-      "phone": "3512345678",
-      "enrollNumber": "55667788990011",
-      "dateOfAdmission": "25-Jun-2022"
-    },
-    {
-      "id": 10,
-      "name": "Diego Herrera",
-      "email": "diego.herrera@example.com",
-      "phone": "3512345678",
-      "enrollNumber": "55667788990011",
-      "dateOfAdmission": "25-Jun-2022"
+      "name": "Mariana",
+      "email": "marianita120@gmail.com",
+      "phone": "3217833316",
+      "enrollNumber": "2266990022",
+      "dateOfAdmission": "2004-02-02"
     }
   ]
 }
