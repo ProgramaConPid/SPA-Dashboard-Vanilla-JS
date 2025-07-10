@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Box Icons CDN -->
+    <link
+    href="https://cdn.boxicons.com/fonts/basic/boxicons.min.css"
+    rel="stylesheet"
+    />
+    <!-- Font Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"
+    />
+    <!-- CSS File -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>SPA Dashboard - Felipe Marin</title>
+  </head>
+  <body>
+
+    <main class="main__content">
+      <aside class="sidebar">
+        <h2 class="sidebar__text">CRUD OPERATIONS</h2>
+        
+        <div class="sidebar__user">
+          <img src="./assets/user--img.jpg" alt="User Image" />
+          <div class="user__info">
+            <h3 class="user__info--name">Random Guy</h3>
+            <p class="user__info--role">Admin</p>
+          </div>
+        </div>
+
+        <nav class="sidebar__nav">
+          <a href="#/home">
+            <i class="bx bx-home-alt"></i>
+            Home
+          </a>
+          <a href="#/course">
+            <i class="bx bx-bookmark"></i>
+            Course
+          </a>
+          <a href="#/users">
+            <i class="bx bx-education"></i>
+            Users
+          </a>
+          <a href="#/payment">
+            <i class="bx bx-print-dollar"></i>
+            Payment
+          </a>
+          <a href="#/report">
+            <i class="bx bx-file-report"></i>
+            Report
+          </a>
+          <a href="#/settings">
+            <i class="bx bx-slider-vertical"></i>
+            Settings
+          </a>
+        </nav>
+
+        <div class="sidebar__logout">
+          <h3 class="sidebar__logout--text">Logout</h3>
+          <i class="bx bx-arrow-right-square"></i>
+        </div>
+      </aside>
+
+      <section class="dashboard" id="dashboard"></section>
+    </main>
+
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
