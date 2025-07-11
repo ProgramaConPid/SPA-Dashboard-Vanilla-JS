@@ -1,3 +1,4 @@
+// Section users view
 export default async function Users() {
   const divContainer = document.createElement("div");
   const divSearch = document.createElement("div");
@@ -33,14 +34,16 @@ export default async function Users() {
     const data = await response.json();
     const dataLength = data.length > 0
 
+    // Validate if db.json has at least one user
     if (dataLength) {
       data.forEach(user => {
+        // Render each user
         const divUser = document.createElement("div"); 
         divUser.classList.add("divUser")
         divUser.id = `${user.id}`
         divUser.innerHTML = `
           <div class="user__name">
-            <img class="img__user" src="../assets/Screenshot_20250710-0929152.webp">
+            <img class="img__user" src="../assets/user--img.jpg">
             <p class="user__name--text">${user.name}</p>
           </div>
   
@@ -59,6 +62,7 @@ export default async function Users() {
         divContainerUsers.appendChild(divUser);
       });
     } else {
+      // Default message if db.json has no users
       const divUser = document.createElement("div"); 
       divUser.classList.add("divUserMessage")
       divUser.innerHTML = `
@@ -72,12 +76,15 @@ export default async function Users() {
     divContainer.innerHTML = `<h1>${err}</h1>`;
   }
 
+  // Add classes to each section
   divContainer.classList.add("dashboard__content")
   divAddUser.classList.add("divAddUser");
   divSearch.classList.add("divSearch");
   divContainerUsers.classList.add("divContainerUsers");
 
+  // Add each section to the main container
   divContainer.append(divSearch, divAddUser, divContainerUsers);
 
+  // Container that contains each section
   return divContainer;
 }

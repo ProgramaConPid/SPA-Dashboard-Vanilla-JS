@@ -1,3 +1,4 @@
+// Delete a specific user function
 export default async function deleteUser(userId) {
   try {
     const response = await fetch(`http://localhost:3000/users/${userId}`, {
@@ -8,6 +9,6 @@ export default async function deleteUser(userId) {
       throw new Error("Error al intentar eliminar el usuario");
     }
   } catch (err) {
-    alert(err.message);
+    alert(err);
   }
 }

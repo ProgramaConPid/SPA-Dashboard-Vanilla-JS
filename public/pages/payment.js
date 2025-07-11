@@ -1,3 +1,4 @@
+// Section payment view
 export default function Payment() {
 
   const div = document.createElement("div")

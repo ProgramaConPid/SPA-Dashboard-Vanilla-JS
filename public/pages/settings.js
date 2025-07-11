@@ -1,3 +1,4 @@
+// Section settings view
 export default function Settings() {
 
   const div = document.createElement("div")

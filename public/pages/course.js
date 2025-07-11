@@ -1,3 +1,4 @@
+// Section course view
 export default function course() {
 
   const div = document.createElement("div")

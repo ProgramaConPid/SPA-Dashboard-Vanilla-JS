@@ -1,3 +1,4 @@
+// Section report view
 export default function Report() {
 
   const div = document.createElement("div")

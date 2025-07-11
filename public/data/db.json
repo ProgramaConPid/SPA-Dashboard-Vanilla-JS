@@ -1,12 +1,28 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Mariana",
-      "email": "marianita120@gmail.com",
+      "id": "1",
+      "name": "Camila Torres",
+      "email": "camila.torres@example.com",
+      "phone": "3109988776",
+      "enrollNumber": "5511990077",
+      "dateOfAdmission": "2005-01-18"
+    },
+    {
+      "id": "2",
+      "name": "Ligella Suarez",
+      "email": "ligellasuarez@gmail.com",
+      "phone": "3207822213",
+      "enrollNumber": "2233445566",
+      "dateOfAdmission": "1925-07-14"
+    },
+    {
+      "id": "3",
+      "name": "Andrea Jhamile",
+      "email": "andreajham@gmail.com",
       "phone": "3217833316",
-      "enrollNumber": "2266990022",
-      "dateOfAdmission": "2004-02-02"
+      "enrollNumber": "2244667788",
+      "dateOfAdmission": "2004-02-20"
     }
   ]
 }
