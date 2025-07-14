@@ -23,9 +23,6 @@ export default async function modifyUser(id, name, email, phone, enrollNumber, d
     if (!response.ok) {
       throw new Error("Error al conectar con el servidor")
     }
-
-    const data = await response.json()
-    return data
   } catch(err) {
     alert(err)
   }
